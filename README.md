@@ -14,3 +14,6 @@ CompressCSS uses a modified version of Clean-CSS for all CSS minification. Based
 2. Place your CSS code inside the input box (left side). Make sure to NOT include <style> tags.
 3. Click "Compress" and wait for it to finish the process.
 4. Once finished, the compressed CSS codes should appear in the output box (right side).
+
+## Preserved
+You can use the comment tag with exclamation mark to keep an important comment or to ignore that part when compressing. To use, put the content between `/*!` and `*/`.
