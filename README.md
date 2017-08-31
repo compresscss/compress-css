@@ -8,3 +8,5 @@ not only saving up money on hosting but you're also making your site load faster
 How does it work?
 --------
 It works by removing unnecessary white-spaces, line breaks, indentations, comments, semicolons, quotes and by combining rules when possible. It can also optimize various properties, like converting rgb colors to shorthand hex equivalent resulting into shorter code. By the default, the compressor also removes all invalid CSS such as negative paddings and empty rules. These are just a few among many things that this tool can do.
+
+CompressCSS uses a modified version of Clean-CSS for all CSS minification. Based on benchmarks, it is currently the best when it comes to reducing the file size of CSS files.
