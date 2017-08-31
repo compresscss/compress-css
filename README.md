@@ -11,7 +11,7 @@ CompressCSS uses a modified version of Clean-CSS for all CSS minification. Based
 
 ### Usage
 1. First we recommend that you create a backup of your original CSS file. After that, go to [compresscss.net](https://compresscss.net/)
-2. Place your CSS code inside the input box (left side). Make sure to NOT include <style> tags.
+2. Place your CSS code inside the input box (left side). Make sure to NOT include `<style>` tags.
 3. Click "Compress" and wait for it to finish the process.
 4. Once finished, the compressed CSS codes should appear in the output box (right side).
 
