@@ -17,3 +17,6 @@ CompressCSS uses a modified version of Clean-CSS for all CSS minification. Based
 
 ## Preserved
 You can use the comment tag with exclamation mark to keep an important comment or to ignore that part when compressing. To use, put the content between `/*!` and `*/`.
+
+Example:
+```/*! CompressCSS | MIT License | Do not remove */```
