@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Compress CSS – Minify your CSS Files Online</title>
+	<meta content="Speed up your site by minifying your style sheets. Compress CSS can remove white-spaces, combine rules, optimize properties and strip comments resulting to lower file size." name="description">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<link href="https://compresscss.net/" rel="canonical">
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+	<link href="//fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+	<div class="top-pane">
+		<header>
+			<div class="brand">
+				<a href="/"><i class="logo"></i><h1>Compress CSS</h1></a>
+			</div>
+
+			<div class="tools">
+				<ul><li><a href="https://compresshtml.com/">HTML</a></li><li class="selected"><a href="/">CSS</a></li><li><a href="https://compressjavascript.com/">JS</a></li></ul>
+			</div>
+
+			<div class="links">
+				<ul>
+					<li><a href="#" id="abt-btn">About</a>
+					</li>
+
+					<li class="dropdown-btn"><a href="#">More Tools <i class="down"></i></a>
+						<ul class="dropdown">
+							<li class="shtml"><a href="https://compresshtml.com/">
+								<strong>Compress HTML</strong>
+								<span>Online HTML files compressor</span>
+							</a>
+							</li>
+							<li class="sjs"><a href="https://compressjavascript.com/">
+								<strong>Compress JavaScript</strong>
+								<span>Online JavaScript files compressor</span>
+							</a>
+							</li>
+							<li class="snote"><a href="https://onlinenotepad.org/">
+								<strong>Online Notepad</strong>
+								<span>Simple browser-based text editor</span>
+							</a>
+							</li>
+							<li class="sfr"><a href="https://findreplace.net/">
+								<strong>Find & Replace</strong>
+								<span>Advanced search and replace tool</span>
+							</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="https://www.addtoany.com/share" rel="nofollow" onclick='window.open(this.href,"_blank","height=400,width=600");return false;'><i class="share"></i></a>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<div class="menu">
+			<div class="actions">
+				<ul><li><input type="button" value="Compress" id="minify-btn"></li><li><input type="button" value="Reset" class="reset" id="clear-all"></li><li><input type="button" value="Guide" id="how-btn"></li></ul>
+			</div>
+
+			<div id="savings">
+				<ul><li><span id="source_code"></span></li><li><span id="compressed"></span></li><li><span id="percent"></span></li></ul>
+			</div>
+
+			<div id="download">
+				<ul><li><input type="button" value="Download" id="saves" onclick="saveTextAsFile()"></li></ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="abt-bg"></div>
+	<div id="abt-box">
+	  <div id="abt-head"><h3>About</h3><span id="abt-x"><i class="close"></i></span></div>
+		<div class="about">
+				<h3>Introduction</h3>
+				<p>CompressCSS is a free tool that you can use to minify your CSS files online. Smaller file size means less bandwidth consumption, so by compressing you're not only saving up money on hosting but you're also making your site load faster.</p>
+				<br>
+				<h3>How does it work?</h3>
+				<p>It works by removing unnecessary white-spaces, line breaks, indentations, comments, semicolons, quotes and by combining rules when possible. It can also optimize various properties, like converting rgb colors to shorthand hex equivalent resulting into shorter code. By the default, the compressor also removes all invalid CSS such as negative paddings and empty rules. These are just a few among many things that this tool can do.</p>
+				<br>
+				<p>CompressCSS uses a modified version of Clean-CSS for all CSS minification. Based on benchmarks, it is currently the best when it comes to reducing the file size of CSS files.</p>
+		</div>
+	</div>
+
+	<div id="how-bg"></div>
+	<div id="how-box">
+	  <div id="how-head"><h3>Guide</h3><span id="how-x"><i class="close"></i></span></div>
+		<div class="about">
+				<h3>Usage</h3>
+				<ol>
+					<li>First we recommend that you create a backup of your original CSS file.</li>
+					<li>Place your CSS code inside the input box (left side). Make sure to NOT include <code>&lt;style&gt;</code> tags.</li>
+					<li>Click "Compress" and wait for it to finish the process.</li>
+					<li>Once finished, the compressed CSS codes should appear in the output box (right side).</li>
+				</ol>
+				<br>
+				<h3>Preserve</h3>
+				<p>You can use the comment tag with exclamation mark to keep an important comment or to ignore that part when compressing. To use, put the content between <code>/*!</code> and <code>*/</code>.</p>
+				<br>
+				Example:
+				<pre><code>/*! CompressCSS | MIT License | Do not remove */</code></pre>
+				<br>
+				<h3>Compatibility</h3>
+				<p>CompressCSS compressor is fully compatible with Google Chrome, Firefox, Opera, Safari, IE 10+, Edge and other modern browsers as long as JavaScipt is enabled.</p>
+		</div>
+	</div>
+
+	<div class="left-pane">
+		<textarea id="input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" autofocus></textarea>
+		<span class="label">Input</span>
+	</div>
+
+	<div class="right-pane">
+		<textarea id="output" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+		<span class="label">Output</span>
+		<div id="compressing">
+		  <div class="loader_wrap">
+		    <div id="loader">
+		      Compressing...
+		    </div>
+		  </div>
+		</div>
+		<div id="error"></div>
+	</div>
+
+
+
+  	<div id="options">
+		<input type="checkbox" id="minifyCSS" checked>
+	</div>
+
+
+	<div class="bottom-pane">
+		<style>
+		.CSS_banner { width: 320px; height: 100px; }
+		@media(min-width: 472px) { .CSS_banner { width: 468px; height: 100px; } }
+		@media(min-width: 732px) { .CSS_banner { width: 728px; height: 90px; } }
+		@media(min-width:974px) { .CSS_banner { width: 970px; height: 90px; }}
+		</style>
+		<!-- CSS_banner -->
+		<ins class="adsbygoogle CSS_banner" style="display:inline-block" data-ad-client="ca-pub-2859608055830984" data-ad-slot="9581296340"></ins>
+		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/minifier.js"></script>
+	<script src="js/master.js"></script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</body>
+</html>
